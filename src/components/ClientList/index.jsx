@@ -5,9 +5,17 @@ const ClientList = ({regulars, vips}) => {
     return (
         <div>
             <h2>VIPs List</h2>
-            <ul>{vipslistitems}</ul>
+            <ul style={{
+                color: "red"
+            }}>
+                {vipslistitems}
+            </ul>
             <h2>Client List</h2>
-            <ul>{clientslistitems}</ul>
+            <ul style={{
+                color: "green"
+            }}>
+                {clientslistitems}
+            </ul>
         </div>
     );
 }

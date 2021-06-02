@@ -10,11 +10,11 @@ const getClients = async () => {
             // Alternative
             // var regularclients = [];
             // var VIPs = [];
-            // for (let i = clients.length - 1; i >= 0; i--) {
-            //   if (clients[i].roles.includes('research')) {
-            //     VIPs.push(clients[i]);
+            // for (let i = data.length - 1; i >= 0; i--) {
+            //   if (data[i].company.name === 'Romaguera-Crona') {
+            //     VIPs.push(data[i]);
             //   } else {
-            //     regularclients.push(clients[i]);
+            //     regularclients.push(data[i]);
             //   }
             // }
 
@@ -51,18 +51,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Quick PR code review</h1> 
       </header>
       <ClientList
         regulars={clients}
