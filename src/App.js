@@ -31,7 +31,7 @@ const getClients = async () => {
                                     });
             
             var VIPs = data
-                        .filter(function filterResearcher(m) {
+                        .filter(function filterClients(m) {
                             return (m.company.name == 'Romaguera-Crona') ? true : false;
                         });
             
@@ -43,11 +43,13 @@ const App = () => {
   const [clients, setClients] = React.useState([]);
   const [vips, setVIPs] = React.useState([]);
 
-  getClients().then(([c, v]) => {
-    setClients(c);
-    setVIPs(v);
-  });
-
+  useEffect(() => {
+    getClients().then(([c, v]) => {
+      setClients(c);
+      setVIPs(v);
+    });
+  }, []);
+  
   return (
     <div className="App">
       <header className="App-header">
